@@ -1,7 +1,7 @@
 use serde::{Deserialize, Serialize};
 use serde_repr::{Deserialize_repr, Serialize_repr};
 
-use crate::{LSPObject, Uri};
+use crate::{LSPObject, Url as Uri};
 
 pub use notification_params::*;
 
