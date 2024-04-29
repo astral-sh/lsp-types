@@ -1,3 +1,8 @@
+> \[!IMPORTANT\]
+>
+> This fork is a temporary solution for supporting Jupyter Notebooks for our new LSP server, `ruff server`.
+> This fork is not actively maintained by Astral.
+
 # lsp-types [![Build Status](https://travis-ci.org/gluon-lang/lsp-types.svg?branch=master)](https://travis-ci.org/gluon-lang/lsp-types) [![Documentation](https://docs.rs/lsp-types/badge.svg)](https://docs.rs/crate/lsp-types)
 
 Types useful for interacting with a [language server](https://code.visualstudio.com/blogs/2016/06/27/common-language-protocol).
