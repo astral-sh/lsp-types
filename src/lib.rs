@@ -241,7 +241,9 @@ pub type LSPArray = Vec<serde_json::Value>;
 
 /// Position in a text document expressed as zero-based line and character offset.
 /// A position is between two characters like an 'insert' cursor in a editor.
-#[derive(Debug, Eq, PartialEq, Ord, PartialOrd, Copy, Clone, Default, Deserialize, Serialize, Hash)]
+#[derive(
+    Debug, Eq, PartialEq, Ord, PartialOrd, Copy, Clone, Default, Deserialize, Serialize, Hash,
+)]
 pub struct Position {
     /// Line position in a document (zero-based).
     pub line: u32,
@@ -2045,6 +2047,12 @@ pub struct ServerCapabilities {
     /// Whether server provides moniker support.
     #[serde(skip_serializing_if = "Option::is_none")]
     pub moniker_provider: Option<OneOf<bool, MonikerServerCapabilities>>,
+
+    /// The server provides type hierarchy support.
+    ///
+    /// @since 3.17.0
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub type_hierarchy_provider: Option<OneOf<bool, TypeHierarchyServerCapabilities>>,
 
     /// The server provides linked editing range support.
     ///
