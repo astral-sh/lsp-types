@@ -24,6 +24,20 @@ pub struct DiagnosticClientCapabilities {
     /// Whether the clients supports related documents for document diagnostic pulls.
     #[serde(skip_serializing_if = "Option::is_none")]
     pub related_document_support: Option<bool>,
+
+    /// Whether the clients accepts diagnostics with related information.
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub related_information: Option<bool>,
+
+    /// Client supports a codeDescription property
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub code_description_support: Option<bool>,
+
+    /// Whether code action supports the `data` property which is
+    /// preserved between a `textDocument/publishDiagnostics` and
+    /// `textDocument/codeAction` request.
+    ///
+    pub data_support: Option<bool>,
 }
 
 /// Diagnostic options.
